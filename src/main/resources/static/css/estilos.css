@@ -1,0 +1,72 @@
+/* Fondo rojo vino */
+.custom-navbar {
+    background-color: #7b0f0f;
+    padding: 12px 0;
+}
+
+/* Texto marca */
+.brand-text {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Contenedor de botones */
+.nav-pill-container {
+    gap: 15px;
+}
+
+/* Botones estilo ovalado */
+.nav-pill {
+    background-color: #d9d9d9;
+    color: #7b0f0f !important;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* Botón activo (Inicio) */
+.active-pill {
+    background-color: black;
+    color: #caa84a !important;
+}
+
+/* Hover */
+.nav-pill:hover {
+    background-color: #bfbfbf;
+}
+
+/* Fondo principal */
+.custom-footer {
+    background-color: #7b0f0f;
+    border-top: 3px solid #caa84a;
+}
+
+/* Títulos */
+.footer-title {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Lista */
+.footer-list {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Íconos redes */
+.social-img {
+    transition: 0.3s ease;
+}
+
+.social-img:hover {
+    transform: scale(1.15);
+}
+
+/* Parte inferior */
+.footer-bottom {
+    background-color: #5e0c0c;
+    font-size: 14px;
+}

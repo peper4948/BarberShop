@@ -1,0 +1,131 @@
+<!-- Fragmento #1 que irá en el head de todas las páginas, así se incluye todo lo necesario de configuración-->
+<head th:fragment="head">
+    <title>BarberShop</title>
+    <meta charset="UTF-8"/>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script> 
+
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid d-flex align-items-center">
+
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/img/barbería.png" alt="Logo" width="60" class="me-2">
+                <span class="brand-text">BarberShop</span>
+            </a>
+
+            <!-- Botón responsive -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menú -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav nav-pill-container">
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-pill active-pill" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-pill" href="#">Servicios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-pill" href="#">Tienda</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-pill" href="#">Cuenta</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<section th:fragment="imagen1">
+    <img th:src="@{/img/varon 3.jpg}" class="img-fluid" alt="Imagen">
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="custom-footer text-light pt-4">
+
+    <div class="container">
+        <div class="row">
+
+            <!-- Horario -->
+            <div class="col-md-4 mb-3">
+                <h4 class="footer-title">Horario</h4>
+                <p>
+                    Lunes: 10:00 AM / 8:00 PM <br>
+                    Martes: 10:00 AM / 8:00 PM <br>
+                    Miércoles: 10:00 AM / 8:00 PM <br>
+                    Jueves: 10:00 AM / 8:00 PM <br>
+                    Viernes: 10:00 AM / 8:00 PM <br>
+                    Sábado: 09:00 AM / 8:00 PM <br>
+                    Domingo: 10:00 AM / 5:00 PM
+                </p>
+            </div>
+
+            <!-- Contacto -->
+            <div class="col-md-4 mb-3">
+                <h4 class="footer-title">Contáctenos</h4>
+                <p>
+                    Teléfono Centro Comercial Desamparados: +506 4080-3634 <br>
+                    Teléfono Centro Comercial del Sur: +506 8363-7483 <br>
+                    Teléfono Centro Comercial Guadalupe: +506 8584-0320
+                </p>
+
+                <!-- Redes -->
+                <div class="social-icons mt-3 d-flex gap-3">
+                    <a href="#">
+                        <img src="/img/facebook.svg" width="28" class="social-img">
+                    </a>
+                    <a href="#">
+                        <img src="/img/instagram.svg" width="28" class="social-img">
+                    </a>
+                </div>
+            </div>
+            <!-- Ubicaciones -->
+            <div class="col-md-4 mb-3">
+                <h4 class="footer-title">Ubicaciones</h4>
+                <ul class="footer-list">
+                    <li>Centro Comercial Desamparados</li>
+                    <li>Centro Comercial del Sur</li>
+                    <li>Centro Comercial Guadalupe</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Línea inferior -->
+    <div class="footer-bottom text-center py-2 mt-3">
+        © 2026 Barberías Varón, Costa Rica. Creado por Grupo 01.
+    </div>
+
+</footer>
+
