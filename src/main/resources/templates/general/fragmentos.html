@@ -30,22 +30,32 @@
 
             <!-- Menú -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            [[#{plantilla.idioma}]]</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" th:href="@{/(lang=es)}">Español</a></li>
+                            <li><a class="dropdown-item" th:href="@{/(lang=en)}">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 <ul class="navbar-nav nav-pill-container">
 
                     <li class="nav-item">
-                        <a class="nav-link nav-pill active-pill" href="#">Inicio</a>
+                        <a class="nav-link nav-pill active-pill" href="#">[[#{accion.inicio}]]</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link nav-pill" href="#">Servicios</a>
+                        <a class="nav-link nav-pill" href="#">[[#{accion.servicio}]]</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link nav-pill" href="#">Tienda</a>
+                        <a class="nav-link nav-pill" href="#">[[#{accion.tienda}]]</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link nav-pill" href="#">Cuenta</a>
+                        <a class="nav-link nav-pill" href="#">[[#{accion.cuenta}]]</a>
                     </li>
 
                 </ul>
@@ -57,6 +67,57 @@
 
 <section th:fragment="imagen1">
     <img th:src="@{/img/varon 3.jpg}" class="img-fluid" alt="Imagen">
+</section>
+
+<section th:fragment="quienesSomos" class="quienes-somos py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Columna izquierda -->
+            <div class="col-md-6 text-light">
+
+                <h2 class="titulo-principal">[[#{info.quienesSomos}]]</h2>
+                <h4 class="subtitulo">[[#{info.texto1}]]<br> [[#{info.texto2}]]</h4>
+
+                <div class="info-item mt-4 d-flex">
+                    <img th:src="@{/img/tijeras.svg}" width="40" class="me-3">
+                    <div>
+                        <h5>[[#{info.p&p}]]</h5>
+                        <p>
+                            [[#{info.p&p.texto}]]
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-item mt-4 d-flex">
+                    <img th:src="@{/img/mostacho.svg}" width="40" class="me-3">
+                    <div>
+                        <h5>[[#{info.experiencia}]]</h5>
+                        <p>
+                            [[#{info.experiencia.texto}]]
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-item mt-4 d-flex">
+                    <img th:src="@{/img/gira.svg}" width="40" class="me-3">
+                    <div>
+                        <h5>[[#{info.calidad}]]</h5>
+                        <p>
+                            [[#{info.calidad.texto}]]
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="col-md-6 text-center">
+                <img th:src="@{/img/varon 2.jpg}" class="img-fluid rounded shadow">
+            </div>
+
+        </div>
+    </div>
 </section>
 
 
@@ -78,25 +139,25 @@
 
             <!-- Horario -->
             <div class="col-md-4 mb-3">
-                <h4 class="footer-title">Horario</h4>
+                <h4 class="footer-title">[[#{info.horario}]]</h4>
                 <p>
-                    Lunes: 10:00 AM / 8:00 PM <br>
-                    Martes: 10:00 AM / 8:00 PM <br>
-                    Miércoles: 10:00 AM / 8:00 PM <br>
-                    Jueves: 10:00 AM / 8:00 PM <br>
-                    Viernes: 10:00 AM / 8:00 PM <br>
-                    Sábado: 09:00 AM / 8:00 PM <br>
-                    Domingo: 10:00 AM / 5:00 PM
+                    [[#{dia.lunes}]]<br>
+                    [[#{dia.martes}]]<br>
+                    [[#{dia.miercoles}]]<br>
+                    [[#{dia.jueves}]]<br>
+                    [[#{dia.viernes}]]<br>
+                    [[#{dia.sabado}]]<br>
+                    [[#{dia.domingo}]]
                 </p>
             </div>
 
             <!-- Contacto -->
             <div class="col-md-4 mb-3">
-                <h4 class="footer-title">Contáctenos</h4>
+                <h4 class="footer-title">[[#{info.contactenos}]]</h4>
                 <p>
-                    Teléfono Centro Comercial Desamparados: +506 4080-3634 <br>
-                    Teléfono Centro Comercial del Sur: +506 8363-7483 <br>
-                    Teléfono Centro Comercial Guadalupe: +506 8584-0320
+                    [[#{tel.1}]]<br>
+                    [[#{tel.2}]]<br>
+                    [[#{tel.3}]]
                 </p>
 
                 <!-- Redes -->
@@ -111,11 +172,11 @@
             </div>
             <!-- Ubicaciones -->
             <div class="col-md-4 mb-3">
-                <h4 class="footer-title">Ubicaciones</h4>
+                <h4 class="footer-title">[[#{info.ubicaciones}]]</h4>
                 <ul class="footer-list">
-                    <li>Centro Comercial Desamparados</li>
-                    <li>Centro Comercial del Sur</li>
-                    <li>Centro Comercial Guadalupe</li>
+                    <li>[[#{lugar.1}]]</li>
+                    <li>[[#{lugar.2}]]</li>
+                    <li>[[#{lugar.3}]]</li>
                 </ul>
             </div>
 
@@ -124,7 +185,7 @@
 
     <!-- Línea inferior -->
     <div class="footer-bottom text-center py-2 mt-3">
-        © 2026 Barberías Varón, Costa Rica. Creado por Grupo 01.
+        [[#{footer}]]
     </div>
 
 </footer>

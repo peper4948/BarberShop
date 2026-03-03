@@ -70,3 +70,34 @@
     background-color: #5e0c0c;
     font-size: 14px;
 }
+.quienes-somos {
+    background-color: #0b1a26;
+}
+
+.titulo-principal {
+    font-size: 48px;      /* antes 40 */
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 24px;      /* más grande */
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.info-item h5 {
+    font-size: 24px;      /* antes 20 */
+    font-style: italic;
+}
+
+.info-item p {
+    font-size: 18px;      /* antes 15 */
+    color: #dcdcdc;
+    line-height: 1.6;
+}
+.info-item img {
+    width: 50px;
+    filter: brightness(0) invert(1);
+}
